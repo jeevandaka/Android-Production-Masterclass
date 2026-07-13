@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="http://schemas.android.com/tools">
     <string name="app_name">QuizApp</string>
+    <string name="com.google.firebase.crashlytics.mapping_file_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
+    <string name="com.google.firebase.crashlytics.version_control_info">""</string>
+    <string name="gcm_defaultSenderId" translatable="false">106187002083</string>
+    <string name="google_api_key" translatable="false">AIzaSyBmdfINRbDzAL0CSfvjBOUAdk1g5VdB-D8</string>
+    <string name="google_app_id" translatable="false">1:106187002083:android:3516f56395c4f360ac35d6</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBmdfINRbDzAL0CSfvjBOUAdk1g5VdB-D8</string>
+    <string name="google_storage_bucket" translatable="false">quizapp-f8a31.firebasestorage.app</string>
+    <string name="project_id" translatable="false">quizapp-f8a31</string>
 </resources>

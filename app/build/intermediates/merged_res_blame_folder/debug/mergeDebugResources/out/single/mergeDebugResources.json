@@ -1,14 +1,14 @@
 [
     {
-        "merged": "com.dailyrounds.quizapp-debug-57:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.dailyrounds.quizapp-main-59:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.dailyrounds.quizapp-debug-67:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.dailyrounds.quizapp-main-69:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.dailyrounds.quizapp-debug-57:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.dailyrounds.quizapp-main-59:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.dailyrounds.quizapp-debug-67:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.dailyrounds.quizapp-main-69:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.dailyrounds.quizapp-debug-57:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.dailyrounds.quizapp-main-59:/drawable/ic_launcher_background.xml"
+        "merged": "com.dailyrounds.quizapp-debug-67:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.dailyrounds.quizapp-main-69:/drawable/ic_launcher_foreground.xml"
     }
 ]

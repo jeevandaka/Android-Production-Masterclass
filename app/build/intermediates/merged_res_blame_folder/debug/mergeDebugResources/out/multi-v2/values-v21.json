@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.dailyrounds.quizapp-mergeDebugResources-55:/values-v21/values-v21.xml",
+            "outputFile": "com.dailyrounds.quizapp-mergeDebugResources-65:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Hp\\.gradle\\caches\\transforms-4\\164a54b593ef92ca3d18d212a0c21231\\transformed\\core-1.13.1\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\Hp\\.gradle\\caches\\transforms-4\\08775c4a09d324111cea84dc542edc61\\transformed\\core-1.13.1\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

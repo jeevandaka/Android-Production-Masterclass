@@ -590,7 +590,7 @@ public final class DaggerQuizApplication_HiltComponents_SingletonC {
     }
 
     @Override
-    public void injectQuizApplication(QuizApplication quizApplication) {
+    public void injectQuizApplication(QuizApplication arg0) {
     }
 
     @Override
