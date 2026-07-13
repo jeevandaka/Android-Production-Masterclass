@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "What is the capital of France?",
+    "options": ["Berlin", "Paris", "Madrid", "Rome"],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": 2,
+    "question": "Which language is primarily used for modern Android development?",
+    "options": ["Swift", "Kotlin", "Ruby", "PHP"],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": 3,
+    "question": "What does MVVM stand for?",
+    "options": ["Model View ViewModel", "Multi View Virtual Machine", "Model Visual View Manager", "Modular Vertical View Model"],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Which Jetpack library is used for local database storage?",
+    "options": ["Retrofit", "Room", "Glide", "WorkManager"],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": 5,
+    "question": "What is the largest planet in our solar system?",
+    "options": ["Earth", "Saturn", "Jupiter", "Neptune"],
+    "correctOptionIndex": 2
+  },
+  {
+    "id": 6,
+    "question": "Which Kotlin feature is used for asynchronous programming?",
+    "options": ["Coroutines", "Threads only", "Interfaces", "Generics"],
+    "correctOptionIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "What does JSON stand for?",
+    "options": ["Java Standard Object Notation", "JavaScript Object Notation", "Joint Syntax Object Notation", "Java Serialized Object Network"],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": 8,
+    "question": "Which company develops Android?",
+    "options": ["Apple", "Microsoft", "Google", "Amazon"],
+    "correctOptionIndex": 2
+  },
+  {
+    "id": 9,
+    "question": "Which architecture component holds UI-related data and survives configuration changes?",
+    "options": ["Fragment", "ViewModel", "Activity", "Intent"],
+    "correctOptionIndex": 1
+  },
+  {
+    "id": 10,
+    "question": "What is the default build system for Android projects?",
+    "options": ["Maven", "Ant", "Gradle", "Bazel"],
+    "correctOptionIndex": 2
+  }
+]
