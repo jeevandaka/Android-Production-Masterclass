@@ -29,12 +29,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.dailyrounds.quizapp.core.CrashLogger
 import com.dailyrounds.quizapp.ui.components.OptionButton
 import com.dailyrounds.quizapp.ui.components.OptionVisualState
 import com.dailyrounds.quizapp.ui.components.ProgressDots
 import com.dailyrounds.quizapp.ui.components.StreakCelebration
 import com.dailyrounds.quizapp.ui.results.ResultsScreen
 import com.dailyrounds.quizapp.ui.splash.SplashScreen
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import kotlin.math.abs
 
 private const val SWIPE_THRESHOLD_PX = 80f
@@ -44,17 +46,20 @@ fun QuizRoute(
     viewModel: QuizViewModel = hiltViewModel()
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
-
+    CrashLogger.log("Quiz Opened")
     when (val s = state) {
         QuizUiState.Loading -> SplashScreen()
         is QuizUiState.Error -> ErrorContent(message = s.message, onRetry = viewModel::loadQuestions)
-        is QuizUiState.Quiz -> QuizContent(
-            state = s,
-            onOptionSelected = viewModel::onOptionSelected,
-            onSkip = viewModel::onSkipClicked,
-            onSwipeNext = viewModel::onSwipeToNext,
-            onStreakCelebrationShown = viewModel::onStreakCelebrationShown
-        )
+        is QuizUiState.Quiz -> {
+            CrashLogger.log("Quiz Screen Opening")
+            QuizContent(
+                state = s,
+                onOptionSelected = viewModel::onOptionSelected,
+                onSkip = viewModel::onSkipClicked,
+                onSwipeNext = viewModel::onSwipeToNext,
+                onStreakCelebrationShown = viewModel::onStreakCelebrationShown
+            )
+        }
         is QuizUiState.Results -> ResultsScreen(
             correct = s.correct,
             total = s.total,
@@ -88,6 +93,7 @@ private fun QuizContent(
     onSwipeNext: () -> Unit,
     onStreakCelebrationShown: () -> Unit
 ) {
+    CrashLogger.log("Quiz Screen Opened")
     Scaffold { padding ->
         Column(
             modifier = Modifier
@@ -166,7 +172,11 @@ private fun QuizContent(
                             text = option,
                             state = visualState,
                             enabled = !state.isAnswerRevealed,
-                            onClick = { onOptionSelected(index) },
+                            onClick =
+                                {
+                                    onOptionSelected(index)
+                                    CrashLogger.log("User Selected Option $index")
+                                },
                             modifier = Modifier.padding(vertical = 6.dp)
                         )
                     }

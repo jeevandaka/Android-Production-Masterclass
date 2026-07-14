@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dailyrounds.quizapp.domain.usecase.GetQuestionsUseCase
 import com.dailyrounds.quizapp.util.Constants
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -37,6 +38,7 @@ class QuizViewModel @Inject constructor(
                     _uiState.value = QuizUiState.Error("No questions available.")
                     return@launch
                 }
+                FirebaseCrashlytics.getInstance().log("Questions Loaded Successfully")
                 _uiState.value = QuizUiState.Quiz(
                     questions = questions,
                     currentIndex = 0,

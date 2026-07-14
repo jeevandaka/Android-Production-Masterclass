@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.dailyrounds.quizapp.core.CrashLogger
 import com.dailyrounds.quizapp.ui.navigation.QuizNavGraph
 import com.dailyrounds.quizapp.ui.theme.QuizAppTheme
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -18,7 +19,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        FirebaseCrashlytics.getInstance().log("Quiz App Started")
+        CrashLogger.log("Quiz App Started")
 
         enableEdgeToEdge()
         setContent {

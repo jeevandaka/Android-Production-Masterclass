@@ -20,10 +20,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.dailyrounds.quizapp.core.CrashLogger
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 
 @Composable
 fun SplashScreen() {
+    CrashLogger.log("SplashScreen Screen Opened")
     val transition = rememberInfiniteTransition(label = "splashPulse")
     val alpha by transition.animateFloat(
         initialValue = 0.4f,
